@@ -39,16 +39,31 @@ Linear baseline vs. nonlinear ensembles:
   
 ---
 
-##  Project 2 — Hybrid Hierarchical Deep Learning Framework for Stock Forecasting in the Taiwan Stock Market
+## Project 2 — Hybrid Hierarchical Deep Learning Framework for Stock Forecasting in the Taiwan Stock Market
 
-### Key Results
-- **R² = 0.937** on the Taiwan Weighted Stock Index (TWII).
-- **HFSLS feature selection alone contributes 97%** of the total performance gain — the most critical component.
-- Cross-industry validation:
-  - Defensive sectors: predicted accurately
-  - Tech sectors: predicted accurately
-  - Cyclical sectors: more volatile (as expected), but turning points still captured
+### Data
+- Taiwan stock market historical data (TEJ Pro database), **Jan 2020 – Sept 2025** (daily closing prices)
+- Chronological 70/30 train-test split (train: 2020/01 – 2023/12 · test: 2024/01 – 2025/09)
+- Targets: **TAIEX** (market index) + 4 representative individual stocks across industries
+  - **TSMC** (semiconductor) · **Evergreen Marine** (shipping) · **MediaTek** (IC design) · **Uni-President** (retail)
 
-### Practical Value
-- Captures **key market turning points** missed by classical models.
-- Provides a **quantitative investment tool** suitable for portfolio decisions.
+### Features
+A high-dimensional **Alpha158** feature set (158 technical indicators) refined by hierarchical feature selection:
+- Price-volume indicators (OHLC, volume, VWAP)
+- Trend indicators (MA 5/10/20/30/60, K-line patterns)
+- Momentum indicators (Rate of Change, Raw Stochastic Value)
+- Volatility & correlation (standard deviation, range extremes, Beta)
+- **HFSLS** (Hierarchical Feature Selection with Local Shuffling) applied to reduce redundancy
+
+### Models
+Baseline vs. proposed hybrid architecture:
+- **BIGRU** *(baseline — bidirectional gated recurrent unit)*
+- **PSO-BIGRU** *(hyperparameter optimization only)*
+- **HFSLS-BIGRU** *(feature selection only)*
+- **HFSLS-PSO-BIGRU** *(proposed full model)*
+
+### Findings
+- The full **HFSLS-PSO-BIGRU** model delivered a **+2.394 absolute increase in R²** and a **97.1% reduction in MSE** vs. the baseline BIGRU on TAIEX prediction.
+- Ablation analysis showed **HFSLS is the dominant driver** — contributing ~97% of total performance gain; PSO applied alone actually *hurt* performance (−1.661 R², +69.6% MSE), confirming feature selection must precede hyperparameter tuning in high-dimensional financial data.
+- Cross-industry robustness: average **R² = 0.926** (std 0.029) across five targets vs. baseline’s 0.088 (std 0.656); the proposed model achieved best performance in **4 out of 5** prediction targets, generalizing well across defensive, tech, and cyclical sectors.
+- Long-short backtest (Jan 2024 – Aug 2025) produced **win rates >86%** on all four stocks, with strategy returns of **598.82% (Evergreen)**, **563.71% (MediaTek)**, and **356.86% (TSMC)** — substantially exceeding both buy-and-hold and the TAIEX benchmark, with profit factor reaching **29.53** on Evergreen.
