@@ -6,7 +6,7 @@ This repository collects two related research projects on **forecasting the Taiw
 
 | # | Project | Method | Key Result | Paper |
 |---|---------|--------|------------|-------|
-| 1 | **NSTC Undergraduate Research** *(Jul 2025 – Feb 2026)* | Multi-level momentum & liquidity-volatility factors + tree ensembles (XGBoost / LightGBM / RF / GBRT) | Nonlinear models beat linear regression by **~50%** on backtest returns | [運用機器學習分析多層次動能與流動性波動度之研究](papers/國科會大專生研究計畫成果報告.pdf) |
+| 1 | **NSTC Undergraduate Research** *(Jul 2025 – Feb 2026)* | Multi-level momentum & liquidity-volatility factors + (XGBoost / LightGBM / RF / GBRT / NN) | Nonlinear models beat linear regression by **~50%** on backtest returns | [運用機器學習分析多層次動能與流動性波動度之研究](papers/國科會大專生研究計畫成果報告.pdf) |
 | 2 | **Hybrid Hierarchical Deep Learning (HHDL)** *(Sept 2025 – Jan 2026)* | HFSLS feature selection + PSO-tuned BIGRU | **R² = 0.937** on TWII; HFSLS contributes 97% of the gain | [分層股票預測模型](papers/Hybrid%20Hierarchical%20Deep%20Learning%20Framework%20for%20Stock%20Forecasting%20in%20the%20Taiwan%20Stock%20Market.pdf) |
 
 ---
