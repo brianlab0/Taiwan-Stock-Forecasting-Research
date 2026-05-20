@@ -1,19 +1,5 @@
 <h1 align="center">Taiwan Stock Forecasting Research</h1>
 
-<p align="center">
-  <b>Machine Learning & Deep Learning for Taiwan Stock Market Prediction</b><br/>
-  By <a href="https://github.com/brianlab999">Po Chun Huang (黃柏郡)</a> · Soochow University · Data Science
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/R%C2%B2-0.937%20on%20TWII-success?style=flat"/>
-  <img src="https://img.shields.io/badge/Data-1999--2025%20TWSE-2C7BE5?style=flat"/>
-  <img src="https://img.shields.io/badge/Funded%20by-NSTC-D14836?style=flat"/>
-  <img src="https://img.shields.io/badge/Presented-TRIA%202025-purple?style=flat"/>
-</p>
-
----
-
 ##   Overview
 
 This repository collects two related research projects on **forecasting the Taiwan stock market** using machine learning and deep learning. Both studies use TWSE historical data and benchmark against the Taiwan Weighted Stock Index (TWII).
