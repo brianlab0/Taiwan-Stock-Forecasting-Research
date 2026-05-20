@@ -10,32 +10,33 @@ This repository collects two related research projects on **forecasting the Taiw
 | 2 | **Hybrid Hierarchical Deep Learning (HHDL)** *(Sept 2025 – Jan 2026)* | HFSLS feature selection + PSO-tuned BiGRU | **R² = 0.937** on TWII; HFSLS contributes 97% of the gain | [Hybrid Hierarchical Deep Learning Framework for Stock Forecasting in the Taiwan Stock Market](papers/Hybrid%20Hierarchical%20Deep%20Learning%20Framework%20for%20Stock%20Forecasting%20in%20the%20Taiwan%20Stock%20Market.pdf)
 ---
 
-##  Project 1 — An Empirical Study on Multi-Level Momentum and Liquidity Volatility Using Machine Learning
-### Data
-- Taiwan stock market historical data, **Jan 1999 – Feb 2025**
+## Project 1 — An Empirical Study on Multi-Level Momentum and Liquidity Volatility Using Machine Learning
 
-### Factors
+### Data
+- Taiwan stock market monthly data (TEJ database), **Jan 1999 – Feb 2025** (26 years of full market-cycle coverage)
+- Cross-section of **964 TWSE-listed companies** with monthly factor values
+- Predicted target: next-period **Information Coefficient (IC)** of each factor; portfolios then ranked into equal partitions (10 / 20 / 50 / 100 / 192 / 964 groups) and compared against the **Taiwan Weighted Stock Index (TWII)**
+
+### Features
 A multi-level factor set capturing both momentum and volatility signals:
-- Short-term momentum
-- Long-term momentum
-- Momentum change
-- Maximum single-period return
-- Return volatility
+- **mom1m** — one-month (short-term) momentum
+- **mom12m** — twelve-month (long-term) momentum
+- **chmom** — six-month momentum change (acceleration)
+- **maxret** — maximum single-period return (extreme-return capture)
+- **retvol** — return volatility (risk dimension)
 
 ### Models
-Linear baseline vs. nonlinear ensembles:
-- Linear regression *(baseline)*
-- **XGBoost**
-- **LightGBM**
+Linear baseline vs. nonlinear ML / deep models:
+- **OLS** *(linear regression baseline)*
 - **Random Forest**
-- **GBRT**
-- **NN**
+- **GBRT** · **LightGBM** · **XGBoost** *(gradient-boosted trees)*
+- **Neural Networks** (NN1–NN5, varying 1–5 hidden layers)
 
 ### Findings
-- Nonlinear ensemble models **consistently outperformed** linear regression on both predictive accuracy and backtest returns.
-- Tree-based methods captured **nonlinear interactions** between momentum factors and extreme returns.
-- Equal-partition ranking enabled flexible portfolio construction for diversified allocation and risk management.
-- Backtest portfolios delivered superior cumulative returns vs. the **TWII** benchmark.
+- **Winning rate vs. market:** Random Forest, NN2, and NN4 each achieved a **100% monthly winning percentage** against the TWII across the full 134-month evaluation window; LightGBM, XGBoost, NN3, and NN5 all exceeded 50%, while OLS only reached 54% — confirming nonlinear models’ structural edge.
+- **Risk-adjusted return:** Random Forest delivered Sharpe ratios of **0.337 / 0.427 / 0.429** on the top-10 / top-20 / top-50 partitions, and XGBoost reached **~0.30** consistently — both **far above the TWII benchmark of 0.174**, validating their ability to extract risk-efficient alpha.
+- **Out-of-sample R²:** Random Forest attained the highest **R² = 0.763**, followed by NN3 (0.739), NN4 (0.621), and NN5 (0.525). OLS collapsed to **R² = −3.742**, showing that linear assumptions completely fail to capture the joint nonlinear interactions among momentum and volatility factors.
+- **Cumulative return (Jan 1999 – Feb 2025, 964 partitions):** Random Forest grew capital by **+6.07×**, vs. TWII +0.99× — a roughly **6× outperformance**. Final ranking by cumulative return: **Random Forest > Neural Networks > Gradient Boosting > OLS**, with finer partitions consistently amplifying the ML advantage.
   
 ---
 
