@@ -35,6 +35,7 @@ Linear baseline vs. nonlinear ensembles:
 - **LightGBM**
 - **Random Forest**
 - **GBRT**
+- **NN**
 
 ### Findings
 - Nonlinear ensemble models **consistently outperformed** linear regression on both predictive accuracy and backtest returns.
@@ -45,27 +46,6 @@ Linear baseline vs. nonlinear ensembles:
 ---
 
 ##  Project 2 — HHDL (HFSLS-PSO-BIGRU) Stock Prediction
-
-
-
-### Architecture
-A three-stage hybrid pipeline:
-
-```
-Raw market data
-      │
-      ▼
-[ HFSLS feature selection ]   ← hierarchical / multi-stage screening
-      │
-      ▼
-[ PSO hyperparameter search ]  ← Particle Swarm Optimization
-      │
-      ▼
-[ BIGRU sequence model ]       ← bidirectional GRU
-      │
-      ▼
-Stock price forecast
-```
 
 ### Key Results
 - **R² = 0.937** on the Taiwan Weighted Stock Index (TWII).
