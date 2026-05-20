@@ -11,7 +11,6 @@ This repository collects two related research projects on **forecasting the Taiw
 ---
 
   ## Project 1 — An Empirical Study on Multi-Level Momentum and Liquidity Volatility Using Machine Learning
-
 ### Data
 - Taiwan stock market monthly data (TEJ database), **Jan 1999 – Feb 2025** (26 years of full market-cycle coverage)
 - Cross-section of **964 TWSE-listed companies** with monthly factor values
