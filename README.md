@@ -2,7 +2,7 @@
 
 ##   Overview
 
-This repository collects two related research projects on **forecasting the Taiwan stock market** using machine learning. Both studies use TWSE historical data and benchmark against the Taiwan Weighted Stock Index (TWII).
+This repository collects two related research projects on **forecasting the Taiwan stock market** using machine learning and deep learning. Both studies use TWSE historical data and benchmark against the Taiwan Weighted Stock Index (TWII).
 
 | # | Project | Method | Key Result | Paper |
 |---|---------|--------|------------|-------|
