@@ -10,7 +10,7 @@ This repository collects two related research projects on **forecasting the Taiw
 | 2 | **Hybrid Hierarchical Deep Learning (HHDL)** *(Sept 2025 – Jan 2026)* | HFSLS feature selection + PSO-tuned BiGRU | **R² = 0.937** on TWII; HFSLS contributes 97% of the gain | [Hybrid Hierarchical Deep Learning Framework for Stock Forecasting in the Taiwan Stock Market](papers/Hybrid%20Hierarchical%20Deep%20Learning%20Framework%20for%20Stock%20Forecasting%20in%20the%20Taiwan%20Stock%20Market.pdf)
 ---
 
-##  Project 1 — An Empirical study on multi-level momentum and votality liquidity Using machine learning
+##  Project 1 — An Empirical Study on Multi-Level Momentum and Liquidity Volatility Using Machine Learning
 ### Data
 - Taiwan stock market historical data, **Jan 1999 – Feb 2025**
 
