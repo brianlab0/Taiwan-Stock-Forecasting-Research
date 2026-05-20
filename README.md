@@ -20,8 +20,8 @@ This repository collects two related research projects on **forecasting the Taiw
 
 | # | Project | Method | Key Result | Paper |
 |---|---------|--------|------------|-------|
-| 1 | **NSTC Undergraduate Research** *(Jul 2025 – Feb 2026)* | Multi-level momentum & liquidity-volatility factors + tree ensembles (XGBoost / LightGBM / RF / GBRT) | Nonlinear models beat linear regression by **~50%** on backtest returns | [📄 NSTC Report](papers/NSTC_undergraduate_research_report.pdf) |
-| 2 | **Hybrid Hierarchical Deep Learning (HHDL)** *(Sept 2025 – Jan 2026)* | HFSLS feature selection + PSO-tuned BIGRU | **R² = 0.937** on TWII; HFSLS contributes 97% of the gain | [📄 TRIA 2025 Paper](papers/HHDL_Stock_Forecasting_TRIA2025.pdf) |
+| 1 | **NSTC Undergraduate Research** *(Jul 2025 – Feb 2026)* | Multi-level momentum & liquidity-volatility factors + tree ensembles (XGBoost / LightGBM / RF / GBRT) | Nonlinear models beat linear regression by **~50%** on backtest returns | [📄 NSTC Report](papers/國科會大專生研究計畫成果報告.pdf) |
+| 2 | **Hybrid Hierarchical Deep Learning (HHDL)** *(Sept 2025 – Jan 2026)* | HFSLS feature selection + PSO-tuned BIGRU | **R² = 0.937** on TWII; HFSLS contributes 97% of the gain | [📄 TRIA 2025 Paper](papers/Hybrid%20Hierarchical%20Deep%20Learning%20Framework%20for%20Stock%20Forecasting%20in%20the%20Taiwan%20Stock%20Market.pdf) |
 
 ---
 
@@ -55,6 +55,8 @@ Linear baseline vs. nonlinear ensembles:
 - Tree-based methods captured **nonlinear interactions** between momentum factors and extreme returns.
 - Equal-partition ranking enabled flexible portfolio construction for diversified allocation and risk management.
 - Backtest portfolios delivered superior cumulative returns vs. the **TWII** benchmark.
+
+📄 **Full report:** [國科會大專生研究計畫成果報告.pdf](papers/國科會大專生研究計畫成果報告.pdf)
 
 ---
 
@@ -94,16 +96,18 @@ Stock price forecast
 - Captures **key market turning points** missed by classical models.
 - Provides a **quantitative investment tool** suitable for portfolio decisions.
 
+📄 **Full paper:** [Hybrid Hierarchical Deep Learning Framework for Stock Forecasting in the Taiwan Stock Market.pdf](papers/Hybrid%20Hierarchical%20Deep%20Learning%20Framework%20for%20Stock%20Forecasting%20in%20the%20Taiwan%20Stock%20Market.pdf)
+
 ---
 
 ## 📂 Repository Layout
 
 ```
 taiwan-stock-forecasting-research/
-├── README.md                                   ← you are here
+├── README.md
 └── papers/
-    ├── NSTC_undergraduate_research_report.pdf  ← Project 1 full report
-    └── HHDL_Stock_Forecasting_TRIA2025.pdf     ← Project 2 conference paper
+    ├── 國科會大專生研究計畫成果報告.pdf                                            ← Project 1 full report
+    └── Hybrid Hierarchical Deep Learning Framework for Stock Forecasting...pdf   ← Project 2 conference paper
 ```
 
 Notebooks and reproducible code (HFSLS, BIGRU, PSO-BIGRU, HFSLS-PSO-BIGRU) will be added in a follow-up commit.
