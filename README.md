@@ -11,7 +11,7 @@ This repository collects two related research projects on **forecasting the Taiw
 | # | Project | Method | Key Result | Paper |
 |---|---------|--------|------------|-------|
 | 1 | **NSTC Undergraduate Research** *(Jul 2025 – Feb 2026)* | Multi-level momentum & liquidity-volatility factors + (XGBoost / LightGBM / RF / GBRT / NN) | Nonlinear models beat linear regression by **~50%** on backtest returns | [An Empirical Study on Multi-Level Momentum and Liquidity Volatility Using Machine Learning](papers/國科會大專生計畫成果報告.pdf) |
-| 2 | **Hybrid Hierarchical Deep Learning (HHDL)** *(Sept 2025 – Jan 2026)* | HFSLS feature selection + PSO-tuned BiGRU | **HFSLS-PSO-BIGRU improves R² by +2.394 and reduces MSE by 97.1% vs baseline, with ~97% of gains driven by HFSLS | [A Layered HFSLS-PSO-BIGRU Framework for Stock Forecasting and Trading in the Taiwan Stock Market](papers/A%20Layered%20HFSLS-PSO-BIGRU%20Framework%20for%20Stock%20Forecasting%20and%20Trading%20in%20the%20Taiwan%20Stock%20Market.pdf) |
+| 2 | **Hybrid Hierarchical Deep Learning (HHDL)** *(Sept 2025 – Jan 2026)* | HFSLS feature selection + PSO-tuned BiGRU | **HFSLS-PSO-BIGRU improves R² by +2.394 and reduces MSE by 97.1% vs baseline, with ~97% of gains driven by HFSLS** | [A Layered HFSLS-PSO-BIGRU Framework for Stock Forecasting and Trading in the Taiwan Stock Market](papers/A%20Layered%20HFSLS-PSO-BIGRU%20Framework%20for%20Stock%20Forecasting%20and%20Trading%20in%20the%20Taiwan%20Stock%20Market.pdf) |
 ---
 
 
